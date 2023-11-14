@@ -182,7 +182,12 @@ print('Normalized RMSE:', rmse / diff)
 #relative RMSE of 0.05 means that, on average, the model's predictions are off by 5% of the average value of Y.
 ```
 
-![Head](/assets/res0.png)
+```
+R2: 0.8831360957109651
+Average Power Output: 3938246.455667426
+Root Mean Squared Error (RMSE): 39582.626795134114
+Normalized RMSE: 0.05018623435417899
+```
 
 Generally, the performance is quite good already, and we verify this with the scatterplot below – the predicted points are generally clustered around their actual value.
 
@@ -228,9 +233,16 @@ print('Root Mean Squared Error (RMSE):', rmse)
 print('Normalized RMSE:', rmse / diff)
 ```
 
+```
+R2: 0.9401886715594915
+Average Power Output: 3938246.455667426
+Root Mean Squared Error (RMSE): 28625.40062891788
+Normalized RMSE: 0.03629372734357631
+```
+
 The spread of data around the 1:1 trendline appears to be more tight below.
 
-![Head](/assets/res1.png)
+![Head](/assets/ret.png)
 
 ````python3
 plt.figure(figsize=(11,11))
