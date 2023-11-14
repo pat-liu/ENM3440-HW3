@@ -10,7 +10,7 @@ The email exchange that reiterates and confirms this problem statement can be fo
 
 ## Dataset
 
-We reference the "Large-scale Wave Energy Farm" dataset from the UCI Machine Learning Repository – there are multiple sub-datasets on different WEC configurations, but we namely look at the ones with 49 WECs (_WEC_PERTH_49.csv_ and _WEC_SYDNEY_49.csv_). We perform training on our models with _WEC_PERTH_49.csv_, and use _WEC_SYDNEY_49.csv_ as further cross validation.
+We reference the "Large-scale Wave Energy Farm" [dataset](https://archive.ics.uci.edu/dataset/882/large-scale+wave+energy+farm) from the UCI Machine Learning Repository – there are multiple sub-datasets on different WEC configurations, but we namely look at the ones with 49 WECs (_WEC_PERTH_49.csv_ and _WEC_SYDNEY_49.csv_). We perform training on our models with _WEC_PERTH_49.csv_, and use _WEC_SYDNEY_49.csv_ as further cross validation.
 
 ## Approach
 
