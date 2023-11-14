@@ -139,6 +139,8 @@ Our new data model would look like the below table.
 fulldf
 ```
 
+![Head](/assets/newdf.png)
+
 ### Data Train / Test Split
 
 We split our original dataframes into train and test data in preparation for training on our models.
