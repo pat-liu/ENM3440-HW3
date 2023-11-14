@@ -191,7 +191,7 @@ Normalized RMSE: 0.05018623435417899
 
 Generally, the performance is quite good already, and we verify this with the scatterplot below – the predicted points are generally clustered around their actual value.
 
-```python3
+```python
 plt.figure(figsize=(11,11))
 plt.scatter(y_test, pred, c='crimson')
 plt.yscale('log')
@@ -213,7 +213,7 @@ plt.show()
 
 The next natural progression is to use an ensemble of decision trees, known as a Random Forest.
 
-```python3
+```python
 rf_model = RandomForestRegressor(n_estimators=10, max_features="auto", random_state=42)
 rf_model.fit(X_train, y_train)
 
@@ -223,7 +223,7 @@ y_pred = rf_model.predict(X_test)
 
 The predicting accuracy actually improves from the previous decision tree, as expected.
 
-```python3
+```python
 rmse = np.sqrt(mean_squared_error(y_test, y_pred))
 diff = max(y) - min(y) #determine range of values
 
@@ -244,7 +244,7 @@ The spread of data around the 1:1 trendline appears to be more tight below.
 
 ![Head](/assets/ret.png)
 
-```python3
+```python
 plt.figure(figsize=(11,11))
 plt.scatter(y_test, y_pred, c='crimson')
 plt.yscale('log')
@@ -257,13 +257,14 @@ plt.xlabel('True Values', fontsize=15)
 plt.ylabel('Predictions', fontsize=15)
 plt.title('Actual vs. Predicted Power Values')
 plt.axis('equal')
-plt.show()```
+plt.show()
+```
 
 ### Neural Net
 
 We attempt to use a neural net as an additional model.
 
-```python3
+```python
 # use minMax scaler
 min_max_scaler = StandardScaler()
 X_train = min_max_scaler.fit_transform(X_train)
@@ -314,7 +315,7 @@ All our previous training was done on WEC_Perth_49, and so we test our results a
 
 #### Data Processing
 
-```python3
+```python
 #actual prediction – feed in to winning rf_model (or other models) and see predicted result. Crosscheck on WEC_Sydney_49 spreadsheet (used Perth as training).
 #These power outputs have not been seen before, good way to cross validate accuracy.
 
@@ -337,7 +338,7 @@ verifydf['area'] = areas
 
 #### Random Trials
 
-```python3
+```python
 def predict(row_idx, errors, should_print):
   columns_to_delete = ['Power'+str(i+1) for i in range(num_positions)] + ['qW']
   actual_power = verifydf.iloc[[row_idx]]['Total_Power'].values[0]
@@ -354,7 +355,7 @@ def predict(row_idx, errors, should_print):
   errors.append(percentage_err)
 ```
 
-```python3
+```python
 #Random trials
 
 n = len(verifydf.index)
