@@ -244,7 +244,7 @@ The spread of data around the 1:1 trendline appears to be more tight below.
 
 ![Head](/assets/ret.png)
 
-````python3
+```python3
 plt.figure(figsize=(11,11))
 plt.scatter(y_test, y_pred, c='crimson')
 plt.yscale('log')
@@ -292,7 +292,7 @@ model.summary()
 model.fit(X_train, y_train, batch_size = 10, epochs = 100)
 
 y_pred = model.predict(X_test)
-````
+```
 
 ```python3
 y_pred = model.predict(X_test)
