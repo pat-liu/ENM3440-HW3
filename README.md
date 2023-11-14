@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Wave energy is an innovative and up and coming energy source, that can directly target global warming as a renewable resource. Such energy is harvested in wave farms, and is a complicated process due to the complex hydrodynamic interacations betewen wave energy converters (known as WECs). In this blog, we attempt to predict the approximate total power output given the configuration of an array of 49 WECs using different models.
+Wave energy is an innovative and up and coming energy source, that can directly target global warming as a renewable resource. Such energy is harvested in wave farms, and is a complicated process due to the complex hydrodynamic interactions betewen wave energy converters (known as WECs). In this blog, we attempt to predict the approximate total power output given the configuration of an array of 49 WECs using different models.
 
 The email exchange that reiterates and confirms this problem statement can be found below.
 
@@ -561,6 +561,20 @@ Percentage Error:  0.02651884585347933
 
 #### Conclusions
 
+In this project, we are able to capably predict the overall power output of a certain coordinate arrangement of 49 wave energy converters to a great degree of accuracy, using a random forest model. We also tested linear regression and neural net models, which were not nearly as successful. The greatest potential error achieved from this model is generally <= 10%, which is quite reliable for estimating the overall power generated from a specific set of WECs.
+
 ### Reflection
 
-ChatGPT wasn't very helpful in terms of engineering the neural net model.
+As usual, ChatGPT was extremely helpful in terms of helping give suggestions for implementing approaches and high level ideas. For example, it suggested the statistic of Normalized RMSE after performing regression, which measures the relative error – this was found to be a more accurate statistic of how inaccurate a prediction was, due to the inherent large power output values.
+
+![Head](/assets/chat1.png)
+
+Moreover, ChatGPT had great ideas when it came to feature engineering brainstorming. When I wanted to derive a feature related to the geometry of the scatterplot, it suggested the convex hull area (a library implementation that existed) that improved the overall accuracy of my models.
+
+![Head](/assets/chat15.png)
+
+![Head](/assets/chat2.png)
+
+However, ChatGPT wasn't very helpful in terms of engineering the neural net model. Although it knew that the model was overfitting and not predicting correctly, the neural net structure it suggested did not make any overall changes – however, this may be due to the structure of the data itself.
+
+Overall, it still relied on me for driving the direction of the project. If the overall project was represented as a graph with nodes and edges, all the edges and main conclusions and output (nodes) were pushed onwards by me, while there may be some sub-edges from the nodes that don't lead to any other node that were created by ChatGPT.
